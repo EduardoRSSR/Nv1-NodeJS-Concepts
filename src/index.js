@@ -1,7 +1,9 @@
 const express = require ('express');
+const cors = require('cors');
 const {uuid, isUuid} = require('uuidv4');
 const app = express();
 
+app.use(cors());
 app.use(express.json()) //.use para adicionar alguma função que todas as rotas vão ter que passar.
 
 const projects = [];
